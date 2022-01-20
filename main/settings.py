@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 
 import os
 from pathlib import Path
+import dj_database_url
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -26,7 +27,7 @@ SECRET_KEY = 'django-insecure-xfc^67159qunr01p2ow=#xd%tmxixwkg*^+@wxmqa*d!(888y_
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['clivelai.pythonanywhere.com','127.0.0.1']
+ALLOWED_HOSTS = ['clivelai.pythonanywhere.com','127.0.0.1','g3-ai4covid19.herokuapp.com']
 
 # Authentication
 AUTH_USER_MODEL = 'app.Account'
@@ -122,6 +123,7 @@ DATABASES = {
     }
 }
 
+DATABASES = {'default': dj_database_url.config(default='postgres://user:pass@localhost/dbname')}
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
