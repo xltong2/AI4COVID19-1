@@ -123,7 +123,7 @@ DATABASES = {
     }
 }
 
-DATABASES = {'default': dj_database_url.config(default='postgres://user:pass@localhost/dbname')}
+DATABASES = {'default': dj_database_url.config(default='postgres://postgres:abc123@localhost/ai4covid19')}
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
